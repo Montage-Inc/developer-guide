@@ -1,0 +1,22 @@
+seqdiag {
+    activation = none;
+    default_fontsize = 14;
+    default_note_color = Yellow;
+
+    feature [label="feature/xxx"];
+    develop [color=LightBlue];
+    hotfix [color=Pink, label="hotfix/xxx"];
+    master [color=PaleGreen];
+
+    develop --> feature [label="git branch"];
+    feature -> feature [label="commit"];
+    feature -> feature [label="commit"];
+    master --> hotfix [label="git branch"];
+    hotfix -> hotfix [label="commit"];
+    hotfix -> master [label="git merge", rightnote="deploy live"];
+    master -> develop [label="git merge", leftnote="deploy dev"];
+    develop -> feature [label="git merge"];
+    feature -> feature [label="commit"];
+    feature -> develop [label="git merge", rightnote="deploy dev"];
+    develop -> master [label="git merge", rightnote="deploy live"];
+}

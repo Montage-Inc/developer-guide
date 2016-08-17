@@ -1,0 +1,23 @@
+blockdiag {
+    default_fontsize = 14;
+
+    group {
+        color = White;
+        label = "Git branch";
+
+        develop [color=WhiteSmoke];
+        master [color=WhiteSmoke];
+    }
+
+    group {
+        color = White;
+        label = "Environment";
+
+        dev [color=LightBlue, shape=cloud];
+        production [color=PaleGreen, shape=cloud];
+    }
+
+    develop -> dev [color=Green];
+    develop -> master [folded, style=dotted];
+    master -> production [color=Green];
+}
