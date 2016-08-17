@@ -9,8 +9,8 @@ Karma commits.
 
 http://karma-runner.github.io/1.0/dev/git-commit-msg.html
 
-Differences: Karma says 50 characters for the first line, but Github wraps
-at 50. Let's go with 50.
+Karma says 70 characters for the first line, but Github wraps at 50. Let's
+go with 50.
 
 Branching model
 ===============

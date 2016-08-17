@@ -16,7 +16,7 @@ def clean(ctx):
 
 @invoke.task(pre=[clean])
 def build(ctx):
-    invoke.run('sphinx-build -c . ./src ./build', pty=True)
+    invoke.run('sphinx-build ./src ./build', pty=True)
 
 
 @invoke.task(pre=[build])
