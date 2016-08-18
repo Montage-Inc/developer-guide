@@ -50,22 +50,6 @@ All development happens in a feature branch. Feature branches are named as
 When a feature branch has been merged into develop, it is the responsiblity of
 that branches main developer to ensure it is deleted from Github.
 
-..
-
-    Deployment strategy
-    ===================
-
-    All commits to ``develop`` are automatically tested and, if passing, deployed
-    to the dev site. The same holds true for the ``master`` branch, which is
-    deployed to production.
-
-    .. blockdiag:: /_static/diagrams/deployment.diag
-        :width: 600
-
-    .. important::
-
-        Under no circumstances is a production deployment allowed to be made
-        without fully passing unit tests.
 
 .. _git-flow: https://github.com/nvie/gitflow
 .. _git-branch: http://nvie.com/posts/a-successful-git-branching-model/
