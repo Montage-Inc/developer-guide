@@ -1,6 +1,6 @@
-========
-Workflow
-========
+============
+Git workflow
+============
 
 Commit messages
 ===============
@@ -15,10 +15,10 @@ go with 50.
 Branching model
 ===============
 
-Our workflow is based on Vincent Driessen's `"successful git branching model"`__, with
-some minor adjustments. We still utilize ``develop``, ``master``, and various
-types of feature branches, however we do not tag releases and there are no
-release branches.
+Our workflow is based on Vincent Driessen's `"successful git branching model"`__,
+with some minor adjustments. We still utilize ``develop``, ``master``, and
+various types of feature branches, however we do not tag releases and there are
+no release branches.
 
 .. seqdiag:: /_static/diagrams/git-branching-strategy.diag
     :width: 600
@@ -43,27 +43,29 @@ All development happens in a feature branch. Feature branches are named as
     Feature branches are not considered complete until they include all of the
     following:
 
-    * **Code** that conforms to our :doc:`coding style <coding-style>`.
+    * **Code** that conforms to our :doc:`coding style <coding-style/index>`.
     * **Unit tests** that pass locally and in our CI environment.
-    * **Documentation** updates on an as needed basis.
+    * **Documentation** updates, as needed.
 
 When a feature branch has been merged into develop, it is the responsiblity of
 that branches main developer to ensure it is deleted from Github.
 
-Deployment strategy
-===================
+..
 
-All commits to ``develop`` are automatically tested and, if passing, deployed
-to the dev site. The same holds true for the ``master`` branch, which is
-deployed to production.
+    Deployment strategy
+    ===================
 
-.. blockdiag:: /_static/diagrams/deployment.diag
-    :width: 600
+    All commits to ``develop`` are automatically tested and, if passing, deployed
+    to the dev site. The same holds true for the ``master`` branch, which is
+    deployed to production.
 
-.. important::
+    .. blockdiag:: /_static/diagrams/deployment.diag
+        :width: 600
 
-    Under no circumstances is a production deployment allowed to be made
-    without fully passing unit tests.
+    .. important::
+
+        Under no circumstances is a production deployment allowed to be made
+        without fully passing unit tests.
 
 .. _git-flow: https://github.com/nvie/gitflow
 .. _git-branch: http://nvie.com/posts/a-successful-git-branching-model/

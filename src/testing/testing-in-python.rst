@@ -37,7 +37,7 @@ There are two plugins that every project should use:
 When all is said and done, the command to run your tests should look something
 like this::
 
-    py.test tests.py --cov your_module --cov-append --cov-report term-missing --pep8
+    py.test tests/ --cov your_module --cov-append --cov-report term-missing --pep8
 
 
 Automating tests with tox
@@ -52,19 +52,9 @@ so it's good to use even if you're only targeting a single environment.
 
 A simple ``tox.ini`` looks like this:
 
-.. code-block:: ini
+.. literalinclude:: /../example/tox.ini
+    :language: ini
     :linenos:
-
-    [tox]
-    envlist = py27,py35
-
-    [testenv]
-    commands=py.test tests.py --cov your_module --cov-append --cov-report term-missing --pep8
-    deps =
-        pytest
-        pytest-cov
-        pytest-pep8
-        -rrequirements.txt
 
 Now when you run ``tox``, you should see something like this::
 
@@ -87,18 +77,9 @@ Getting tests to run with `tox`_ on `CircleCI`_ requires the use of
 In this example ``circle.yml``, we'll run our tests and upload the coverage
 results to `Codecov`_:
 
-.. code-block:: yaml
+.. literalinclude:: /../example/circle.python.yml
+    :language: ini
     :linenos:
-
-    dependencies:
-      override:
-        - pip install tox tox-pyenv codecov
-        - pyenv local 2.7.10 3.5.0
-
-    test:
-      override:
-        - tox
-        - codecov
 
 
 .. _CircleCI: https://circleci.com/gh/Montage-Inc

@@ -22,6 +22,7 @@ def build(ctx):
 @invoke.task(pre=[build])
 def serve(ctx):
     server.watch(dir('./src/'), lambda: build(ctx))
+    server.watch(dir('./examples/'), lambda: build(ctx))
 
     server.serve(
         root='./build',

@@ -1,5 +1,5 @@
 ===============
-Bugs and Issues
+Bugs and issues
 ===============
 
 Please follow these guidelines when creating new issues in Github.
@@ -20,53 +20,42 @@ has two qualities:
    Do not combine multiple problems even they seem to be similar. Write
    different reports for each problem.
 
-Example
--------
+Bug report template
+-------------------
 
-A good bug report looks something like this:
+::
 
-.. parsed-literal::
+    Environment
+    ===========
 
-    **OS**: Operating System and version (Windows 7, OS X 10.8, Ubuntu 13.04)
-    **Browser**: Browser name and version (IE 10, Firefox 27, Google Chrome 30)
+    * **OS**: Operating System and version (Windows 7, OS X 10.8, Ubuntu 13.04)
+    * **Browser**: Browser name and version (IE 10, Firefox 27, Google Chrome 30)
 
-    **Steps to Reproduce**
+    Steps to Reproduce
+    ==================
 
-    1. Step-by-step instructions that detail how to reproduce the bug
-    2. Don't leave steps out or make any assumptions
-    3. If screenshots are called for, provide them here
-    4. Make sure these steps reliably reproduce the issue
+    1. Step-by-step instructions that detail how to reproduce the bug.
+    2. Don't leave steps out or make any assumptions.
+    3. If screenshots are called for, provide them here.
+    4. Make sure these steps reliably reproduce the issue.
 
-    **Actual Result**
+    Actual Result
+    =============
 
     Describe what happens when the above steps were followed. If there is any
     relevent information in the developer tools window, make note of it here.
 
-    **Expected Result**
+    Expected Result
+    ===============
 
     Explain what should have happened -- or what you expected to happen -- when
     the above steps were followed.
 
-    **Workaround**
+    Workaround
+    ==========
 
-    If you have know a way to work around the problem, describe it here.
+    If you have a way to work around the problem, describe it here.
 
-Here's a template you can paste directly into Github:
-
-::
-
-    **OS**:
-    **Browser**:
-
-    **Summary**
-
-    **Steps to Reproduce**
-
-    **Actual Result**
-
-    **Expected Result**
-
-    **Workaround**
 
 Effectively organizing tickets
 ==============================
